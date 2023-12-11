@@ -21,6 +21,11 @@
 /* [1구간] 최소 769px 이상 ~ 최대 1024px 이하
     : 일반적인 태블릿의 가로(Landscape) 버전 */
 @media screen and (max-width: 1024px) {
+    /* body */ 
+    body {
+        padding-top: 0px;
+    }
+
     /* Header 영역 */
     header {
         position: static;

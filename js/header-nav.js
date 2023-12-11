@@ -24,23 +24,6 @@ function dropdown() {
 
 
 /**
- * 함수: 현재 창의 가로값에 따라 body의 상단 패딩 조정
- */
-function setPaddingTop() {
-    // 조건: 현재 창의 가로값이 1025px 이상일 때
-        // 헤더와 내비게이션의 높이값으로 상단 패딩 설정
-    if (window.innerWidth >= 1025) {
-        let headerHeight = $("header").height();
-        let navHeight = $("nav").height();
-        $("body").css("padding-top", headerHeight + navHeight);
-    } else {
-        // 1025px 이상이면 패딩값 초기화
-        $("body").css("padding-top", 0);
-    }
-}
-
-
-/**
  * 함수: 스크롤에 따라 gnb에 그림자 효과 적용 및 헤더 숨김/표시
  */
 function hideAndShadow() {
@@ -102,9 +85,6 @@ $(".logo img").on("click", reloadPage);
 
 // 드롭다운 메뉴 변경 시 새 창에서 사이트 열림
 $("#familySites").on('change', dropdown);
-
-// 창 크기 변경 시 상단에 패딩 설정
-$(window).on('resize', setPaddingTop);
 
 // 스크롤 시 gnb에 그림자 설정
 $(window).on('scroll', hideAndShadow);
