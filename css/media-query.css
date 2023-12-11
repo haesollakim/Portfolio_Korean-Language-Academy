@@ -1,0 +1,138 @@
+@charset "UTF-8";
+/* [기본 구간 PC버전] 최소 1025px 이상 ~
+    : 데스크톱·랩톱 / PC 대용으로 쓰이는 와이드 태블릿의 가로(Landscape) 버전 */
+/* 햄버거 메뉴 아이콘 */
+.xi-bars {
+  display: none;
+}
+
+/* 반응형 모바일 버전 메뉴 영역 */
+.responsive_nav {
+  display: none;
+}
+
+/* 반응형을 위한 br 태그 조정 */
+.responsive_br {
+  display: none;
+}
+
+/* [1구간] 최소 769px 이상 ~ 최대 1024px 이하
+    : 일반적인 태블릿의 가로(Landscape) 버전 */
+@media screen and (max-width: 1024px) {
+  /* Header 영역 */
+  header {
+    position: static;
+  }
+  /* Global Navigation Bar */
+  .gnb {
+    position: static;
+  }
+  /* 햄버거 메뉴 아이콘 */
+  .xi-bars {
+    display: block;
+    font-size: 3rem;
+  }
+  /* 반응형 모바일 버전 메뉴 영역 */
+  .responsive_nav {
+    background-color: var(--color-lightgray);
+  }
+  /* 메뉴 리스트 */
+  .r_menu_list > li {
+    position: relative;
+    color: var(--color-darkgray);
+    font-size: 1.5rem;
+    padding: 2% 5%;
+    border: 1px solid var(--color-silvergray);
+  }
+  .r_menu_list > li:hover {
+    background-color: var(--color-white);
+  }
+  /* 1번 메뉴: Home */
+  .r_home {
+    background-color: var(--color-white);
+  }
+  /* 서브메뉴가 있는 대메뉴*/
+  .r_includeSub > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .r_includeSub i:active {
+    color: var(--color-red);
+  }
+  /* 서브메뉴 */
+  .r_submenu {
+    display: none;
+  }
+  .r_submenu li {
+    padding: 2.5%;
+  }
+  .r_submenu li:hover {
+    color: var(--color-red);
+  }
+  /* 반응형을 위한 br 태그 조정 */
+  .responsive_br {
+    display: block;
+  }
+  /* 드롭다운 메뉴 */
+  #familySites {
+    display: none;
+  }
+  /* PC버전 메뉴바 */
+  .menubar {
+    display: none;
+  }
+  /* 인삿말·소개 섹션 */
+  .section_greeting .inner {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+  }
+  /* 소개 부분 컨테이너 */
+  .container_txt {
+    padding: 2.5% 15%;
+  }
+  /* 프로모션 섹션 */
+  .section_promotion p {
+    padding: 0 1%;
+  }
+  /* 카드 링크 섹션 */
+  .section_card .inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* [2구간] 최소 480px 이상 ~ 최대 768px 이하
+    : 태블릿 세로(Portrait) 버전 / 스마트폰 가로 버전 */
+@media screen and (max-width: 768px) {
+  /* 한글 이미지 영역 */
+  .img_area {
+    background-position: 40% 0;
+  }
+  /* 카드 링크 섹션 */
+  .section_card .inner {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 10vw;
+  }
+}
+/* [3구간] 최소 360px 이상 ~ 최대 479px 이하
+    : 스마트폰 세로 버전 */
+@media screen and (max-width: 479px) {
+  /* 브라우저 폰트 크기 조정 */
+  html {
+    font-size: 50%;
+  }
+  /* 슬라이드 내부 배치 */
+  .wrap_slide h1 {
+    font-size: 5.75rem;
+  }
+  /* 소개 부분 컨테이너 */
+  .container_txt {
+    padding: 2.5% 10%;
+  }
+  /* 프로모션 내부 배치 */
+  .wrap_promotion h3 {
+    font-size: 3rem;
+  }
+  .wrap_promotion p {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=media-query.css.map */

@@ -1,0 +1,113 @@
+@charset "UTF-8";
+/* Header 영역 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: var(--color-red);
+  font-size: 1.25rem;
+  z-index: 99999;
+}
+header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header p {
+  color: var(--color-white);
+}
+
+/* 드롭다운 메뉴 */
+#familySites {
+  padding: 0.5% 0.25%;
+}
+
+/* Global Navigation Bar */
+.gnb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: var(--color-white);
+  z-index: 99999;
+}
+.gnb .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gnb.bottomShadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* 사업체 로고 */
+.logo a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100px;
+}
+.logo img {
+  width: 150px;
+}
+.logo:hover {
+  cursor: pointer;
+}
+
+/* 메뉴바 */
+.menubar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 메뉴 카테고리 */
+.menuCategory {
+  position: relative;
+  margin-left: 2.5vw;
+}
+
+/* 메뉴 타이틀 */
+.menuTitle {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.menuTitle:hover {
+  color: var(--color-red);
+}
+
+/* 1번 메뉴: Home */
+.home {
+  color: var(--color-red);
+}
+
+/* 서브메뉴 */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 150%;
+  left: 0;
+  width: 200px;
+  border-top: 3px solid var(--color-red);
+  background-color: var(--color-lightgray);
+  line-height: 250%;
+}
+.submenu li {
+  font-size: 1.5rem;
+  padding: 3%;
+  cursor: pointer;
+}
+.submenu li:hover {
+  background-color: var(--color-white);
+}/*# sourceMappingURL=header-nav.css.map */

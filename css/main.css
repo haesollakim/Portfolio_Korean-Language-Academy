@@ -1,0 +1,268 @@
+@charset "UTF-8";
+/* 슬라이드 섹션 */
+.section_slide {
+  width: 100%;
+}
+
+/* Slick Slide */
+.slick_slide {
+  width: 100%;
+}
+
+/* Slick Slide: 슬라이드 */
+[class^=slide] {
+  width: 100%;
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* 1번 슬라이드 */
+.slide01 {
+  background-image: url(../images/slide/main-slide-1.jpg);
+}
+
+/* 2번 슬라이드 */
+.slide02 {
+  background-image: url(../images/slide/main-slide-2.jpg);
+}
+
+/* 3번 슬라이드 */
+.slide03 {
+  background-image: url(../images/slide/main-slide-3.jpg);
+}
+
+/* 슬라이드 내부 배치 */
+.wrap_slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 90vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 2%;
+  padding-left: 7.5%;
+}
+.wrap_slide p {
+  color: var(--color-white);
+  font-size: 3rem;
+  font-family: "roboto-slab", serif;
+}
+.wrap_slide h1 {
+  color: var(--color-white);
+  font-size: 7rem;
+  font-family: "roboto-slab", serif;
+}
+.wrap_slide a {
+  width: 150px;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 5px 10px;
+  margin-top: 3%;
+}
+
+/* Slick Slide 이전·이후 */
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
+
+/* Slick Slide 액티브 */
+.slick-active p {
+  animation: goDown 2s;
+}
+.slick-active h1 {
+  animation: goUp 2s;
+}
+
+/* 인삿말·소개 섹션 */
+.section_greeting {
+  width: 100%;
+  background-color: var(--color-lightgray);
+  padding: 5rem 0;
+}
+.section_greeting .inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3vw;
+  width: 100%;
+  padding: 2.5% 5%;
+}
+
+/* 한국어 인사 */
+.annyeonghaseyo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 7rem;
+  font-weight: 900;
+  margin: 30rem 0;
+}
+.annyeonghaseyo span {
+  color: var(--color-black);
+  font-family: "Independence_hall";
+  margin: 0 2%;
+}
+
+/* 한글 이미지 컨테이너 */
+.container_img {
+  width: 100%;
+  padding: 2.5%;
+}
+
+/* 한글 이미지 영역 */
+.img_area {
+  height: 550px;
+  background-image: url(../images/concept-shot/hangul-shot.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+}
+
+/* 소개 부분 컨테이너 */
+.container_txt {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 2.5%;
+}
+.container_txt h2 {
+  font-size: 4rem;
+  font-family: "roboto-slab", serif;
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+/* 탭메뉴 리스트 */
+.list_tab {
+  display: inline-block;
+  margin: 2% 0;
+}
+
+/* 탭 */
+[class^=tab] {
+  position: relative;
+  width: 250px;
+  line-height: 200%;
+  font-size: 2rem;
+  font-weight: 450;
+  border-bottom: 3px solid var(--color-silvergray);
+  padding-right: 25px;
+}
+[class^=tab]:hover {
+  cursor: pointer;
+}
+[class^=tab]::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--color-red);
+}
+[class^=tab].colorpoint a {
+  color: var(--color-red);
+}
+[class^=tab].colorpoint::after {
+  width: 100%;
+  transition: 1s;
+}
+[class^=tab].colorpoint i {
+  color: var(--color-red);
+}
+
+/* 소개글 */
+[class^=txt] {
+  display: none;
+  line-height: 170%;
+  color: var(--color-gray);
+  font-size: 1.6rem;
+  margin-top: 10px;
+}
+[class^=txt] i {
+  color: var(--color-red);
+}
+
+/* 프로모션 섹션 */
+.section_promotion {
+  width: 100%;
+  max-width: 100%;
+  background-image: url(../images/concept-shot/promotion-shot.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--color-white);
+  text-align: center;
+}
+
+/* 프로모션 내부 배치 */
+.wrap_promotion {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5% 0;
+}
+.wrap_promotion h3 {
+  color: var(--color-white);
+  font-size: 4.5rem;
+  font-family: "roboto-slab", serif;
+  margin-bottom: 2%;
+}
+.wrap_promotion p {
+  color: var(--color-white);
+  font-size: 1.75rem;
+  margin-top: 2%;
+}
+
+/* 카드 링크 섹션 */
+.section_card {
+  padding: 20rem 0;
+}
+.section_card h4 {
+  font-size: 5rem;
+  font-family: "roboto-slab", serif;
+  text-align: center;
+  margin-bottom: 7.5%;
+}
+.section_card h4 br {
+  display: none;
+}
+.section_card .inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+/* 카드 */
+.card a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid var(--color-red);
+  padding: 25px;
+}
+.card a:hover {
+  border: 4px solid var(--color-white);
+  box-shadow: 0 0 15px var(--color-silvergray);
+}
+.card i {
+  color: var(--color-red);
+  font-size: 5rem;
+  margin-right: 25px;
+}
+.card dt {
+  font-size: 3rem;
+  font-weight: 900;
+  font-family: "roboto-slab", serif;
+  margin-bottom: 10px;
+}
+.card dd {
+  color: var(--color-gray);
+  font-size: 2rem;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,82 @@
+@charset "UTF-8";
+/* 색상 변수 */
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url("https://use.typekit.net/gpi2akx.css");
+:root {
+  /* 바탕 색상 */
+  --color-white: #ffffff; /* 기본 흰색 */
+  --color-lightgray: #f2f1f0; /* 밝은 회색 */
+  --color-silvergray: #cccccc; /* 은회색 */
+  --color-gray: #7e8890; /* 회색 */
+  --color-darkgray: #333c4e; /* 진회색 */
+  --color-black: #000000; /* 기본 검은색 */
+  /* 주색상 */
+  --color-red: #ba0c2f; /* 붉은색 */
+}
+
+/* 기본 글꼴 */
+.notosanskr * {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 포인트 글꼴-1 */
+.roboto-slab * {
+  font-family: "roboto-slab", serif;
+}
+
+/* 포인트 글꼴-2 */
+@font-face {
+  font-family: "Independence_hall";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/Independence_hall.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* 전역 초기 세팅 */
+* {
+  box-sizing: border-box;
+  list-style: none;
+  color: var(--color-darkgray);
+  font-family: "Noto Sans KR", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+/* 브라우저의 폰트 크기를 10px = 1rem으로 설정 */
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  padding-top: 150px;
+}
+
+/* a 태그의 브라우저 기본 스타일 변경 */
+a {
+  text-decoration: none;
+}
+
+/* 전체 레이아웃 영역 가로 사이즈 */
+.inner {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* 애니메이션: 위에서 아래로 하강 */
+@keyframes goDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10vh);
+  }
+}
+/* 애니메이션: 아래에서 위로 상승 */
+@keyframes goUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10vh);
+  }
+}/*# sourceMappingURL=common.css.map */

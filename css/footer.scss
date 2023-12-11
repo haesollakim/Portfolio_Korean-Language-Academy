@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+/* Footer 영역 */
+.application_form {
+    width: 100%;
+    background-color: var(--color-darkgray);
+    text-align: center;
+
+    & > .inner {
+        padding: 100px 0;
+
+        h5 {
+            color: var(--color-white);
+            font-size: 3rem;
+            font-family: "roboto-slab", serif;
+            margin-bottom: 0.75%;
+        }
+
+        & > p {
+            color: var(--color-gray);
+            font-size: 2rem;
+            margin-bottom: 5%;
+        }
+    }
+}
+
+fieldset {
+    border: none;
+
+    & > * {
+        margin: 5px;
+    }
+}
+
+legend {
+    position: absolute;
+    left: -9999px;
+    border: none;
+}
+
+label {
+    color: var(--color-lightgray);
+    font-size: 1.25rem;
+}
+
+/* 접근성을 위한 숨김 클래스 */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    padding: 0;
+    margin: -1px;
+}
+
+#name,
+#email,
+#otherLanguage {
+    width: 200px;
+    height: 40px;
+    border: none;
+    padding-left: 5px;
+}
+
+div[role="radiogroup"] {
+    display: inline-block;
+    color: var(--color-lightgray);
+    font-size: 1.5rem;
+}
+
+input[type="radio"] {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+#otherLanguage {
+    background-color: var(--color-gray);
+}
+
+#submitBtn {
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    font-size: 1.25rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.bottom_info {
+    width: 100%;
+    background-color: #3d3d3d;
+
+    & > .inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 10vh;
+    }
+
+    p {
+        color: var(--color-white);
+    }
+}
